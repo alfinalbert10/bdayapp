@@ -1,0 +1,10 @@
+.navbar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px; /* Adjust padding for better spacing */
+    align-items: center;
+  /* Space between logo and heading */
+    width: 1495px; /* Make the navbar span full width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for styling */
+  }
+  

@@ -1,0 +1,58 @@
+.main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .birthday-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .birthday-table th, .birthday-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .birthday-table th {
+    background-color: black;
+    font-weight: bold;
+  }
+  
+  /* .birthday-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  } */
+  
+  /* .birthday-table tr:hover {
+    background-color: #f1f1f1;
+  } */
+  
+  .add-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .add-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  button {
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100px;
+  }
+  
+  /* button:hover {
+    background-color: #ddd;
+  }
+   */
