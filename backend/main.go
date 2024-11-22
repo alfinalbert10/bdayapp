@@ -6,6 +6,7 @@ import (
 	"bdayappbknd/managers"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	"os"
 )
 
 func init() {
@@ -24,13 +25,14 @@ func main() {
 	userManager := managers.NewUserManager()                // Pointer
 	userHandler := handlers.NewUserHandlerFrom(userManager) // Use pointer directly
 	userHandler.RegisterUserApis(router)
-	// router.Run() // listen and serve on 0.0.0.0:8080
-	//port := os.Getenv("PORT") // Use the PORT environment variable
-	//
-	//if port == "" {
-	//	port = "8080" // Default port if none is set
-	//}
 
-	// Run the server on the specified port
-	router.Run()
+	// listen and serve on 0.0.0.0:8080
+	port := os.Getenv("PORT") // Use the PORT environment variable provided by Render
+
+	if port == "" {
+		port = "8080" // Default to port 8080 if no environment variable is set
+	}
+
+	// Ensure binding to the correct port
+	router.Run(":" + port)
 }
