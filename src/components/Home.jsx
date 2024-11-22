@@ -5,8 +5,10 @@ import axios from 'axios';
 const MainContent = () => {
   const [data, setData] = useState([])
   useEffect(()=>{
-    axios.get('http://localhost:8080/api/users/')
-    .then(res=> setData(res.data))
+    axios.get('http://localhost:8080/api/users')
+    .then(res=> {
+      console.log(res)
+      setData(res.data)})
     .catch(err => console.log(err))
   }, [])
 
